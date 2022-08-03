@@ -1,8 +1,15 @@
 import java.sql.SQLOutput;
 
 public class Main {
-    public static void main(String[] args)
-    {// Задание 1
+    public static void main(String[] args) {
+    task1();
+    task2();
+    task3();
+    task4();
+    task5();
+
+    }
+    public static void task1 () {
 
         byte apple = 5;
         int banana = 12;
@@ -13,8 +20,8 @@ public class Main {
         boolean appleisAdult = apple > 10;
         char a = 35;
 
-
-        // Задание 2
+    }
+    public static void task2 () {
 
         double boxer1 = 78.2;
         double boxer2 = 82.7;
@@ -24,53 +31,68 @@ public class Main {
         System.out.println("Общий вес боксеров " + weigthAllOfBoxers);
         System.out.println("Разница в весе боксеров " + weigthDifference);
 
-        // Задание 3
+    }
+    public static void task3 () {
 
-        byte bananasWiegth = 80;
-        byte milkWiegth = 105;
-        byte ice_cremWiegth = 100;
-        byte eggsWiegth = 70;
+        int bananas = 5;
+        int bananasWiegth = 80;
 
-        int weigthAllOfIngredients = (bananasWiegth*5) + (milkWiegth*2) + (ice_cremWiegth*2) + (eggsWiegth*4);
+        int milk = 200/ 100;
+        int milkWiegth = 105;
+
+        int iceCrem = 2;
+        int ice_cremWiegth = 100;
+
+        int eggs = 4;
+        int eggsWiegth = 70;
+
+        int weigthAllOfIngredients = (bananas * bananasWiegth) + (milk * milkWiegth) + (iceCrem * ice_cremWiegth) + (eggs * eggsWiegth);
+
         int grPerKg = 1000;
-        float weigthKg = weigthAllOfIngredients/ (float)grPerKg;
+
+        double weigthKg = weigthAllOfIngredients/ (double) grPerKg;
 
         System.out.println("Общий вес спорт-завтрака " + weigthAllOfIngredients + " грамм");
         System.out.println(weigthKg + " киллограмм");
 
-        // Задание 4
+    }
 
-        byte kg = 7;
+    public static void task4 () {
+
+        int kg = 7;
         int gr_Per_Kg = 1000;
         int weigth_Kg = kg * gr_Per_Kg;
-        short oneDiet = 250;
-        short twoDiet = 500;
+
+        int oneDiet = 250;
+        int twoDiet = 500;
 
         int daysToLoseWeigth1 = weigth_Kg/ oneDiet;
         int daesToLoseWeigth2 = weigth_Kg/ twoDiet;
-        int averageAmountDays = (daysToLoseWeigth1 + daesToLoseWeigth2) /2;
+        int averageAmountDays = (daysToLoseWeigth1 + daesToLoseWeigth2) / 2;
 
         System.out.println("если терять по 250 грамм, то понадобиться " + daysToLoseWeigth1 + " дней");
         System.out.println("если терять по 500 грамм,  то понадобиться " + daesToLoseWeigth2 + " дней");
         System.out.println("в среднем может потребоваться " + averageAmountDays + " день");
 
-        // Задание 5
+    }
+    public static void task5 () {
+
+
+        int procent = 10;
+        double upProcent = procent / (100 * 1.0);
 
         int Masha = 67760;
         int Denis = 83690;
         int Kristina = 76230;
 
-        float upSalaryMashaProcent = Masha * 0.1f;
-        float upSalaryDenisProcent = Denis * 0.1f;
-        float upSalaryKristinaProcent = Kristina * 0.1f;
 
-        float upSalaryMasha = Masha + upSalaryMashaProcent;
-        float upSalaryDenis = Denis + upSalaryDenisProcent;
-        float upSalaryKristina = Kristina + upSalaryKristinaProcent;
+        int upSalaryMasha = (int) (Masha + (Masha * upProcent));
+        int upSalaryDenis = (int) (Denis + (Denis * upProcent));
+        int upSalaryKristina = (int) (Kristina + (Kristina * upProcent));
 
-        float annualIncomeMasha = (upSalaryMasha * 12) - (Masha * 12);
-        float annualIncomeDenis = (upSalaryDenis * 12) - (Denis *12);
-        float annualIncomeKristina = (upSalaryKristina * 12) - (Kristina *12);
+        int annualIncomeMasha = (upSalaryMasha - Masha) * 12;
+        int annualIncomeDenis = (upSalaryDenis - Denis) *12;
+        int annualIncomeKristina = (upSalaryKristina - Kristina) *12;
 
         System.out.println("Маша теперь получает " + upSalaryMasha + " рублей. Годовой доход вырос на " + annualIncomeMasha + " рублей");
         System.out.println("Денис теперь получает " + upSalaryDenis + " рублей. Годовой доход вырос на " + annualIncomeDenis + " рублей");
